@@ -7,14 +7,14 @@ class TestAnd < Minitest::Test
 
   def setup
     @samples = [
+        Hogweed::Sample::new(0, 1, 0, 0),
+        Hogweed::Sample::new(1, 1, 1, 1),
         Hogweed::Sample::new(0, 0, 0, 0),
         Hogweed::Sample::new(0, 0, 0, 1),
-        Hogweed::Sample::new(0, 0, 1, 0),
-        Hogweed::Sample::new(0, 0, 1, 1),
-        Hogweed::Sample::new(0, 1, 0, 0),
-        Hogweed::Sample::new(0, 1, 0, 1),
         Hogweed::Sample::new(0, 1, 1, 0),
-        Hogweed::Sample::new(1, 1, 1, 1),
+        Hogweed::Sample::new(0, 0, 1, 1),
+        Hogweed::Sample::new(0, 0, 1, 0),
+        Hogweed::Sample::new(0, 1, 0, 1),
     ]
     @p = Hogweed::Perceptron::new(0.5, 0.3, 10000, 1, 3)
   end
